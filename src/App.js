@@ -7,8 +7,7 @@ import JType from "./components/JType/";
 const typingName = <JType
 name="Ian Fabs"
 fps={40}
-caps={true}
-done={()=>{alert('done')}}
+func={()=>{alert('hello')}}
 />;
 
 class App extends Component {
