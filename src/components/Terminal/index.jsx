@@ -49,7 +49,7 @@ class Terminal extends React.Component {
  * @param {*[]} props.children - The components children
  * @return {React.Component}
  */
-function Ty({type,prompt,typeDelay,content,children}){
+function Line({type,prompt,typeDelay,content,children}){
     return (
         <span 
             data-ty={type===(null||undefined)?false:type}
@@ -60,37 +60,6 @@ function Ty({type,prompt,typeDelay,content,children}){
     );
 }
 
-const TyWindow = styled.div`
-    width: 750px;
-    max-width: 100%;
-    background: var(--color-bg);
-    color: var(--color-text);
-    border-radius: 4px;
-    padding: 75px 45px 35px;
-    position: relative;
-    &:before {
-        content: '';
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        /* A little hack to display the window buttons in one pseudo element. */
-        background: #d9515d;
-        -webkit-box-shadow: 25px 0 0 #f4c025, 50px 0 0 #3ec930;
-        box-shadow: 25px 0 0 #f4c025, 50px 0 0 #3ec930;
-    }
-    &:after {
-        content: 'bash';
-        position: absolute;
-        color: var(--color-text-subtle);
-        top: 5px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-    }
-`;
+const Window = props => <span data-ty-window style={props.style}>{props.children}</span>;
 
-export {TyWindow, Terminal, Ty};
+export {Window, Terminal, Line};
