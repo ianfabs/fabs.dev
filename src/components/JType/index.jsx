@@ -1,6 +1,6 @@
 import React from "react";
 
-class Speller extends React.Component {
+export default class extends React.Component {
   constructor(props) {
     super(props);
 
@@ -37,11 +37,7 @@ class Speller extends React.Component {
       
       if(this.state.ninc < name.length) this.writeText(name, fps, caps, done);
       else done();
-      
     };
-    
     setTimeout(logic, fps);
   }
 }
-
-export default Speller;
