@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "animejs": "^3.0.1",
+    "jatrix-react": "^0.2.0",
     "react": "^16.8.3",
     "react-anime": "^2.2.0",
     "react-dom": "^16.8.3",
