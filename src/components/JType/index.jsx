@@ -56,7 +56,8 @@ class Speller extends React.Component {
   }
   writeText(name, fps, caps, done=()=>{}) {  
     setTimeout(
-    ()=>{ 
+      ()=>{ 
+      //Adds a letter to the full array
       this.state.full[this.state.ninc] = caps ? this.state.alph[this.state.inc].toUpperCase() : this.state.alph[this.state.inc];
       // set display to be as much of the word as possible
       this.setState({ display: this.state.full.reduce(function(a,b){return a+b})} );
